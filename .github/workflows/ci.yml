@@ -11,6 +11,14 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
       - run: npm install --quiet --no-progress --cache=.cache/npm
       - run: node_modules/.bin/gulp lint
       - run: node_modules/.bin/gulp bundle
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: build/ui-bundle.zip
