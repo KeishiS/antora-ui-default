@@ -21,4 +21,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          path: build/ui-bundle.zip
+          name: ui-bundle.zip
+          path: public/_/
