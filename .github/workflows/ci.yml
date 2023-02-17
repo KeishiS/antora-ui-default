@@ -1,0 +1,16 @@
+name: Generate UI bundle
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    name: Generate step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - run: npm install --quiet --no-progress --cache=.cache/npm
+      - run: node_modules/.bin/gulp init
+      - run: node_modules/.bin/gulp bundle
