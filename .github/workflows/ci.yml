@@ -21,5 +21,9 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ui-bundle.zip
+          name: ui-bundle
           path: public/_/
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/ui-bundle.zip
