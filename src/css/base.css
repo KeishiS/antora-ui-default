@@ -68,11 +68,13 @@ sup {
   top: -0.5em;
 }
 
-em em { /* stylelint-disable-line */
+em em {
+  /* stylelint-disable-line */
   font-style: normal;
 }
 
-strong strong { /* stylelint-disable-line */
+strong strong {
+  /* stylelint-disable-line */
   font-weight: normal;
 }
 
@@ -106,6 +108,14 @@ object[type="image/svg+xml"]:not([width]) {
 
 ::placeholder {
   opacity: 0.5;
+}
+
+.twocols {
+  column-count: 2;
+}
+
+.threecols {
+  column-count: 3;
 }
 
 @media (pointer: fine) {

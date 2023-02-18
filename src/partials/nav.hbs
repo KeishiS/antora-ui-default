@@ -1,8 +1,16 @@
 <div class="nav-container"{{#if page.component}} data-component="{{page.component.name}}" data-version="{{page.version}}"{{/if}}>
+  <div class="avatar-content">
+    <img no-lazy class="avatar" src="{{site.keys.icon}}" />
+    <h2>{{site.keys.author}}</h2>
+    <ul class="social-links">
+      <li><a target="_blank" class="fa-brands fa-twitter fa-2x" href="{{site.keys.twitter}}"></a></li>
+      <li><a target="_blank" class="fa-brands fa-github fa-2x" href="{{site.keys.github}}"></a></li>
+    </ul>
+  </div>
   <aside class="nav">
     <div class="panels">
-{{> nav-menu}}
-{{> nav-explore}}
+      {{> nav-menu}}
+      {{> nav-explore}}
     </div>
   </aside>
 </div>
